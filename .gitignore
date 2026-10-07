@@ -1,0 +1,17 @@
+# Build artifacts
+build/
+cmake-cache/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.so
+*.a
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
