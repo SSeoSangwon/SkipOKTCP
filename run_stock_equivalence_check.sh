@@ -5,7 +5,7 @@ set -euo pipefail
 CURRENT_ROOT="$(pwd)"
 PROJECT_ROOT="$(dirname "${CURRENT_ROOT}")"
 
-STOCK_PARENT="${PROJECT_ROOT}/phase13_stock"
+STOCK_PARENT="${PROJECT_ROOT}/stock_equivalence_stock"
 STOCK_ROOT="${STOCK_PARENT}/ns-3.47"
 TARBALL="${STOCK_PARENT}/ns-3.47.tar.bz2"
 
@@ -56,7 +56,7 @@ cd "${CURRENT_ROOT}"
 
 ./ns3 run \
     "scratch/stock-overhead-benchmark --bytes=8000000" \
-    >/tmp/phase13_modified_build.txt
+    >/tmp/stock_equivalence_modified_build.txt
 
 echo "MODIFIED_BUILD=PASS"
 
@@ -71,7 +71,7 @@ cd "${STOCK_ROOT}"
 
 ./ns3 run \
     "scratch/stock-overhead-benchmark --bytes=8000000" \
-    >/tmp/phase13_stock_build.txt
+    >/tmp/stock_equivalence_stock_build.txt
 
 echo "STOCK_BUILD=PASS"
 
@@ -111,7 +111,7 @@ echo "STOCK_BINARY=${STOCK_BIN}"
 export MODIFIED_BIN
 export STOCK_BIN
 
-mkdir -p results/phase13
+mkdir -p results/stock_equivalence
 
 python3 <<'PY'
 import csv
@@ -224,8 +224,8 @@ for repeat in range(1, repeats + 1):
 
 
 csv_path = Path(
-    "results/phase13/"
-    "phase13_stock_equivalence.csv"
+    "results/stock_equivalence/"
+    "stock_equivalence_stock_equivalence.csv"
 )
 
 with csv_path.open(

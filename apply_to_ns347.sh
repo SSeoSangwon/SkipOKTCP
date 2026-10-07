@@ -53,18 +53,18 @@ cp \
     "${TARGET_ROOT}/"
 
 cp \
-    "${BUNDLE_ROOT}/run_phase11_benchmark.sh" \
-    "${BUNDLE_ROOT}/run_phase12_robustness.sh" \
-    "${BUNDLE_ROOT}/run_phase13_stock_equivalence.sh" \
-    "${BUNDLE_ROOT}/run_phase14_scale.sh" \
+    "${BUNDLE_ROOT}/run_selective_recovery_benchmark.sh" \
+    "${BUNDLE_ROOT}/run_robustness_evaluation.sh" \
+    "${BUNDLE_ROOT}/run_stock_equivalence_check.sh" \
+    "${BUNDLE_ROOT}/run_scale_evaluation.sh" \
     "${TARGET_ROOT}/"
 
 chmod +x \
     "${TARGET_ROOT}/run_all_correctness.sh" \
-    "${TARGET_ROOT}/run_phase11_benchmark.sh" \
-    "${TARGET_ROOT}/run_phase12_robustness.sh" \
-    "${TARGET_ROOT}/run_phase13_stock_equivalence.sh" \
-    "${TARGET_ROOT}/run_phase14_scale.sh"
+    "${TARGET_ROOT}/run_selective_recovery_benchmark.sh" \
+    "${TARGET_ROOT}/run_robustness_evaluation.sh" \
+    "${TARGET_ROOT}/run_stock_equivalence_check.sh" \
+    "${TARGET_ROOT}/run_scale_evaluation.sh"
 
 echo "COMPACT_TCP_APPLY=PASS"
 echo "TARGET_ROOT=${TARGET_ROOT}"

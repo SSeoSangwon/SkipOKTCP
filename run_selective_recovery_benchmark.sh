@@ -4,8 +4,8 @@ set -u
 
 cd "$(dirname "$0")"
 
-OUTDIR="results/phase11"
-RAW="${OUTDIR}/phase11_raw.txt"
+OUTDIR="results/benchmark"
+RAW="${OUTDIR}/benchmark_raw.txt"
 
 mkdir -p "${OUTDIR}"
 : > "${RAW}"
@@ -68,9 +68,9 @@ from pathlib import Path
 import csv
 import statistics
 
-outdir = Path("results/phase11")
-raw_path = outdir / "phase11_raw.txt"
-csv_path = outdir / "phase11_results.csv"
+outdir = Path("results/benchmark")
+raw_path = outdir / "benchmark_raw.txt"
+csv_path = outdir / "selective_recovery_benchmark.csv"
 
 rows = []
 

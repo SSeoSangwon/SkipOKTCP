@@ -1,6 +1,6 @@
-# [24-2 URP] SkipOKTCP
+# SkipOKTCP
 
-**Sungkyunkwan University Undergraduate Research Program (URP) · Fall 2024**
+**Fall 2024 · SKKU URP**
 
 SkipOKTCP is an experimental TCP extension implemented in ns-3. It distinguishes application data by importance and applies different recovery behavior to critical and non-critical data.
 
@@ -75,10 +75,10 @@ The full correctness suite can be executed with:
 Evaluation scripts are included for robustness, stock-equivalence, and scale experiments:
 
 ```text
-run_phase11_benchmark.sh
-run_phase12_robustness.sh
-run_phase13_stock_equivalence.sh
-run_phase14_scale.sh
+run_selective_recovery_benchmark.sh
+run_robustness_evaluation.sh
+run_stock_equivalence_check.sh
+run_scale_evaluation.sh
 ```
 
 Aggregated result files are stored under `results/`.
